@@ -47,12 +47,13 @@ function Header() {
     <div className="flex flex-wrap flex-col justify-center items-center lg:flex-row w-full h-auto bg-[#fef8e9] overflow-hidden relative rounded-lg shadow-2xl">
       {/* left div */}
       <div className="flex flex-wrap flex-col lg:w-1/2 lg:justify-start lg:items-start lg:gap-6 gap-6 lg:pl-12 justify-center items-center w-full lg:p-0 p-6 ">
-        <h1 className="lg:text-[36px] lg:font-semibold md:text-[36px] sm:text-[32px] md:font-semibold text-[20px]  font-semibold text-transparent bg-clip-text bg-gradient-to-r from-black via-yellow-800 to-yellow-500 tracking-normal md:leading-[50px]">
-          Limra Child Clinic
-          <br />
+        <h1 className="lg:text-[36px] lg:font-semibold md:text-[36px] sm:text-[32px] md:font-semibold text-[20px]  font-semibold text-transparent bg-clip-text bg-gradient-to-r from-black via-yellow-800 to-yellow-500 tracking-normal md:leading-[50px] text-center lg:text-start">
+          <div className="flex flex-row items-center gap-2 justify-center lg:justify-start">
+            <p>MeDifyCare</p> <img src={assets.logo2} className="w-[40px]"/>
+          </div>
           Virtual health consulting <br /> with a pediatrician doctor
         </h1>
-        <p className="text-sm sm:text-base md:text-[20px]  leading-relaxed md:leading-6 font-medium md:font-medium tracking-wide text-gray-700 lg:text-left md:text-center lg:w-full">
+        <p className="text-sm sm:text-base md:text-[20px]  leading-relaxed md:leading-6 font-medium md:font-medium tracking-wide text-gray-700 lg:text-left text-center lg:w-full">
           Limra Child Clinic provides specialized care for children, treating
           all childhood illnesses and offering admission services for
           comprehensive care.

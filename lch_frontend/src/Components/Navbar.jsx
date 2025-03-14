@@ -20,10 +20,10 @@ function Navbar() {
         src={assets.logo}
         alt=""
         onClick={() => navigate("/")}
-        className="w-[100px] cursor-pointer"
+        className="w-[200px] cursor-pointer"
       />
-      <div className="flex flex-wrap bg-gray-50 px-8 py-2 rounded-full shadow-sm shadow-[#B266B2]">
-        <ul className="hidden md:flex items-start gap-8 font-medium">
+      <div className="hidden md:flex flex-wrap bg-gray-50 px-4 py-2 rounded-full shadow-sm shadow-[#B266B2]">
+        <ul className="hidden md:flex items-start gap-2 font-medium">
           <NavLink to="/">
             <li className="py-1 hover:scale-125 hover:cursor-pointer transition-transform">
               Home

@@ -22,7 +22,7 @@ import header_img from "../assests/header_logo.png";
 import Gynecologist from "./giano icon.png";
 import Dermatologist from "./derma icon.png";
 // import logo from "./logo.svg";
-import logo from "../assests/lch_logo.PNG";
+import logo from "../assests/logo.png";
 import profile_pic from "./profile_image.png";
 import dropdown_icon from "./dropdow_icon.svg";
 import group_profiles from "./group_profiles.png";
@@ -54,8 +54,10 @@ import litter_icon from "../assests/litter.png";
 import star from "../assests/star.png";
 import schedule_icon from "../assests/schedule.png"
 import price_tag from "../assests/price-tag.png"
+import logo2 from "../assests/logo2.png"
 export const assets = {
   logo,
+  logo2,
   fb_icon,
   price_tag,
   appointment_icon,
