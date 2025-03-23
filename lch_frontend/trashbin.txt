@@ -1,3 +1,260 @@
+
+// import Footer from "./Test/Footer";
+ 
+bg-primary
+ 
+bg-primary
+ 
+font-semibold
+ 
+30
+ 
+  <div className="flex flex-row flex-wrap gap-4">
+          <img src={assets.linkdln} alt="icons"  className="w-[25px] h-[20px]" />
+          <img src={assets.twitter} alt="icons"  className="w-[25px] h-[20px]"/>
+          <img src={assets.facebook} alt="icons" className="w-[25px] h-[20px]" />
+          <img src={assets.youtube} alt="icons"  className="w-[25px] h-[20px]"/>
+        </div>
+ 
+../assests/twitter.png
+ 
+assests
+ 
+#800080
+ 
+</div>
+ 
+<div>
+ 
+</div>
+ 
+<div>
+ 
+& Reproductive Care
+ 
+<hr className="bg-green-500" />
+ 
+<hr className="bg-gray-500"/>
+ 
+ <div className="flex flex-row gap-4 space-x-4 justify-between ">
+
+        <div className="flex flex-col gap-4 bg-primary p-8 rounded-2xl text-white shadow-2xl">
+          <h2 className="font-semibold text-[24px]">Expertise</h2>
+          <ul className="flex flex-col gap-2 text-gray-300">
+            <li>Pediatrics: Children's Health & Wellness</li>
+            <li>Neurology: Brain & Nervous System Care</li>
+            <li>Cardiology: Heart & Vascular Health</li>
+            <li>Gynecology: Women's Health & Reproductive Care</li>
+            <li>Orthopedics: Bone, Joint & Muscle Health</li>
+          </ul>
+        </div>
+
+        <div className="flex flex-col gap-4 bg-primary p-8 rounded-2xl text-white shadow-2xl">
+          <h2 className="font-semibold text-[24px]">Services</h2>
+
+          <ul className="flex flex-col gap-2 text-gray-300">
+            <li>Online Consultation</li>
+            <li>Appointment Booking</li>
+            <li>Health Check-ups</li>
+            <li>Emergency Services</li>
+            <li>Lab Tests</li>
+          </ul>
+        </div>
+
+        <div className="flex flex-col gap-4 bg-primary p-8 rounded-2xl text-white shadow-2xl">
+          <h2 className="font-semibold text-[24px]">Learn & Support</h2>
+
+          <ul className="flex flex-col gap-2 text-gray-300">
+            <li>Health Articles</li>
+            <li>FAQs</li>
+            <li>Patient Support</li>
+            <li>Blog</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+
+
+
+        <div className="flex flex-col gap-4 bg-primary p-8 rounded-2xl text-white shadow-2xl">
+          <h2 className="font-semibold text-[24px]">Why Choose Us?</h2>
+
+          <ul className="flex flex-col gap-2 text-gray-300">
+            <li>Experienced Doctors</li>
+            <li>Affordable Pricing</li>
+            <li>Personalized Care</li>
+            <li>Convenient Access</li>
+            <li>Patient Satisfaction</li>
+          </ul>
+        </div>
+      </div>
+ 
+ <div className="flex flex-row gap-4 space-x-4 justify-between ">
+
+        <div className="flex flex-col gap-4 bg-primary p-8 rounded-2xl text-white shadow-2xl">
+          <h2 className="font-semibold text-[24px]">Expertise</h2>
+          <ul className="flex flex-col gap-2 text-gray-300">
+            <li>Pediatrics: Children's Health & Wellness</li>
+            <li>Neurology: Brain & Nervous System Care</li>
+            <li>Cardiology: Heart & Vascular Health</li>
+            <li>Gynecology: Women's Health & Reproductive Care</li>
+            <li>Orthopedics: Bone, Joint & Muscle Health</li>
+          </ul>
+        </div>
+
+        <div className="flex flex-col gap-4 bg-primary p-8 rounded-2xl text-white shadow-2xl">
+          <h2 className="font-semibold text-[24px]">Services</h2>
+
+          <ul className="flex flex-col gap-2 text-gray-300">
+            <li>Online Consultation</li>
+            <li>Appointment Booking</li>
+            <li>Health Check-ups</li>
+            <li>Emergency Services</li>
+            <li>Lab Tests</li>
+          </ul>
+        </div>
+
+        <div className="flex flex-col gap-4 bg-primary p-8 rounded-2xl text-white shadow-2xl">
+          <h2 className="font-semibold text-[24px]">Learn & Support</h2>
+
+          <ul className="flex flex-col gap-2 text-gray-300">
+            <li>Health Articles</li>
+            <li>FAQs</li>
+            <li>Patient Support</li>
+            <li>Blog</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+
+
+
+        <div className="flex flex-col gap-4 bg-primary p-8 rounded-2xl text-white shadow-2xl">
+          <h2 className="font-semibold text-[24px]">Why Choose Us?</h2>
+
+          <ul className="flex flex-col gap-2 text-gray-300">
+            <li>Experienced Doctors</li>
+            <li>Affordable Pricing</li>
+            <li>Personalized Care</li>
+            <li>Convenient Access</li>
+            <li>Patient Satisfaction</li>
+          </ul>
+        </div>
+      </div>
+ 
+Health Articles
+ 
+Learn & Support
+ 
+className="flex flex-col gap-2"
+ 
+<div className="flex flex-col gap-2">
+ 
+Lab Tests
+ 
+Emergency Services
+ 
+Health Check-ups
+ 
+Appointment Booking
+ 
+Online Consultation
+ 
+Orthopedics: Bone, Joint & Muscle Health
+ 
+Gynecology: Women's Health & Reproductive Care
+ 
+Cardiology: Heart & Vascular Health
+ 
+Neurology: Brain & Nervous System Car
+ 
+
+            <li>
+ 
+Pediatrics: Children's Health & Wellness
+ 
+
+        <div></div>
+        <div></div>
+        <div></div>
+ 
+items-center 
+ 
+justify-center items-center
+ 
+m-4
+ 
+bg-orange-300
+ 
+
+          {/* button for sign up */}
+ 
+
+          {/* </div> */}
+ 
+
+          <div className="flex flex-row flex-wrap py-2">
+ 
+bg-orange-300
+ 
+max-w-[40%]
+ 
+max-w-[40%]
+ 
+focus:border-transparent
+ 
+focus:border-transparent
+ 
+focus:border-transparent
+ 
+bg-orange-400
+ 
+ className="py-1 bg-primary border-b-2 w-48"
+                style={{
+                  border: "none",
+                  borderBottom: "2px solid white",
+                  outline: "none",
+                }}
+ 
+className="py-1 bg-primary border-b-2 w-48"
+ 
+
+                style={{
+                  border: "none",
+                  borderBottom: "2px solid white",
+                  outline: "none",
+                }}
+ 
+
+                // }}
+ 
+
+                // style={{
+                //   border: "none",
+                //   borderBottom: "2px solid white",
+                //   outline: "none",
+                  
+ 
+
+                  ::placeholder:{}
+ 
+// placeholder ka color white
+ 
+
+    color: 'black', // input text ka color
+ 
+className=""
+ 
+
+          <div></div>
+ 
+
+            <div></div>
+ 
+
+          <div></div>
+ 
+
+      <div></div>
+ 
 text-center
  
 

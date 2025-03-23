@@ -41,7 +41,7 @@ import generalPhy_icon from "../assests/gn py icon.png"
 import insta_icon from "../assests/instagram.png"
 import fb_icon from "../assests/facebook.png";
 import mail_icon from "../assests/mail.png";
-import twitter from "../assests/twitter.png"
+// import twitter from "../assests/twitter.png"
 import lch_logo from "../assests/lch_logo.PNG"
 import placeholder from "../assests/placeholder.png";
 import technical_support from "../assests/technical-support.png";
@@ -54,10 +54,18 @@ import litter_icon from "../assests/litter.png";
 import star from "../assests/star.png";
 import schedule_icon from "../assests/schedule.png"
 import price_tag from "../assests/price-tag.png"
-import logo2 from "../assests/logo2.png"
+import logo2 from "../assests/logo2.png";
+import linkdln from "../assests/linkedin.png";
+import twitter from "../assests/twitter.png";
+import facebook from "../assests/facebook.png";
+import youtube from "../assests/youtube.png";
 export const assets = {
   logo,
   logo2,
+  youtube,
+  twitter,
+  linkdln,
+  facebook,
   fb_icon,
   price_tag,
   appointment_icon,

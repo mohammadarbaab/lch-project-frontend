@@ -20,10 +20,10 @@ function Navbar() {
         src={assets.logo}
         alt=""
         onClick={() => navigate("/")}
-        className="w-[200px] cursor-pointer"
+        className="md:w-[150px] lg:w-[200px] w-[130px] cursor-pointer"
       />
-      <div className="hidden md:flex flex-wrap bg-gray-50 px-4 py-2 rounded-full shadow-sm shadow-[#B266B2]">
-        <ul className="hidden md:flex items-start gap-2 font-medium">
+      <div className="hidden md:flex flex-wrap bg-gray-50 px-4 lg:px-8 py-2 rounded-full shadow-sm shadow-[#B266B2]">
+        <ul className="hidden md:flex items-start gap-2 lg:gap-4 font-medium">
           <NavLink to="/">
             <li className="py-1 hover:scale-125 hover:cursor-pointer transition-transform">
               Home
@@ -115,7 +115,7 @@ function Navbar() {
         ) : (
           <button
             onClick={() => navigate("/login")}
-            className="bg-primary px-8 py-3 text-white rounded-full font-light hidden md:block"
+            className="bg-primary px-4 py-3 text-white rounded-full font-light hidden md:block"
           >
             Create Account
           </button>
