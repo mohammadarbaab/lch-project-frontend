@@ -45,7 +45,7 @@ function Footer() {
     //     </p>
     //   </div>
     // </div>
-    <div className="mb-1 flex flex-col gap-6">
+    <div className="mb-1 mt-4 flex flex-col gap-6 justify-evenly">
       {/* Top Div Container */}
       <div className="flex lg:flex-row flex-col lg:justify-between justify-center lg:items-start items-center bg-gradient-to-r from-[#800080] to-[#9b59b6] sm:p-12 p-8 rounded-3xl shadow-2xl lg:gap-2 gap-5 ">
         <p className="sm:text-[26px] text-[22px] font-semibold text-white">
@@ -81,9 +81,9 @@ function Footer() {
       </div>
 
       {/* Middle div */}
-      <div className="flex flex-wrap gap-4 justify-between">
+      <div className="flex flex-wrap md:flex-row flex-col gap-4">
         {/* Expertise Card */}
-        <div className="flex flex-col gap-4 bg-gradient-to-r from-[#800080] to-[#9b59b6] p-8 rounded-2xl text-white shadow-2xl flex-1 min-w-[400px] max-w-[400px]">
+        <div className="flex flex-col flex-wrap gap-4 bg-gradient-to-r from-[#800080] to-[#9b59b6] p-8 rounded-2xl text-white shadow-2xl flex-1 md:min-w-[400px] md:max-w-[400px] w-auto">
           <h2 className="font-semibold text-[24px]">
             Expertise
             <hr className="border-t-4 border-gray-400 mt-2 rounded-2xl" />
@@ -119,7 +119,7 @@ function Footer() {
         </div>
 
         {/* Services Card */}
-        <div className="flex flex-col gap-4 bg-gradient-to-r from-[#800080] to-[#9b59b6] p-8 rounded-2xl text-white shadow-2xl flex-1 min-w-[250px] max-w-[300px]">
+        <div className="flex flex-col flex-wrap gap-4 bg-gradient-to-r from-[#800080] to-[#9b59b6] p-8 rounded-2xl text-white shadow-2xl flex-1 md:min-w-[250px] lg:w-auto w-auto">
           <h2 className="font-semibold text-[24px]">
             Services
             <hr className="border-t-4 border-gray-400 mt-2 rounded-2xl" />
@@ -153,8 +153,8 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Learn & Support Card */}
-        <div className="flex flex-col gap-4 bg-gradient-to-r from-[#800080] to-[#9b59b6] p-8 rounded-2xl text-white shadow-2xl flex-1 min-w-[250px] max-w-[300px]">
+ {/* Learn & Support Card */}
+ <div className="flex flex-col flex-wrap gap-4 bg-gradient-to-r from-[#800080] to-[#9b59b6] p-8 rounded-2xl text-white shadow-2xl flex-1 md:min-w-[250px] lg:max-w-[300px] w-auto">
           <h2 className="font-semibold text-[24px]">
             Learn & Support
             <hr className="border-t-4 border-gray-400 mt-2 rounded-2xl" />
@@ -189,7 +189,7 @@ function Footer() {
         </div>
 
         {/* Why Choose Us Card */}
-        <div className="flex flex-col gap-4 bg-gradient-to-r from-[#800080] to-[#9b59b6] p-8 rounded-2xl text-white shadow-2xl flex-1 min-w-[250px] max-w-[300px]">
+        <div className="flex flex-col flex-wrap gap-4 bg-gradient-to-r from-[#800080] to-[#9b59b6] p-8 rounded-2xl text-white shadow-2xl flex-1 md:min-w-[250px] lg:w-auto w-auto">
           <h2 className="font-semibold text-[24px]">
             Why Choose Us?
             <hr className="border-t-4 border-gray-400 mt-2 rounded-2xl" />
@@ -222,6 +222,7 @@ function Footer() {
             </li>
           </ul>
         </div>
+       
       </div>
 
       {/* Bottom Div */}
