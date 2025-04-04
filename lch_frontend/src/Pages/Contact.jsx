@@ -13,17 +13,20 @@ function Contact() {
   return (
     <>
       <div className="flex flex-wrap flex-col justify-center items-center gap-16">
-        <div className="flex flex-col justify-center items-center gap-4 mt-4">
+        <div className="flex flex-col justify-center items-center gap-4 mt-4 p-4">
           <img src={assets.lch_logo} alt="" className="w-12" />
-          <p className="flex flex-wrap text-4xl font-semibold">
+          <p className="flex flex-wrap md:text-4xl text-2xl font-semibold text-center">
             Contact our friendly team
           </p>
           <p className="flex flex-wrap text-gray-500">
             Let us know how we can help.
           </p>
         </div>
-        <div className="flex flex-wrap flex-row gap-4 w-[100%] items-center justify-center">
-          <div className="flex flex-wrap flex-col gap-10 border p-4 rounded-lg shadow-lg w-[20%]">
+
+
+
+        <div className="flex flex-wrap flex-row gap-4 w-full items-center justify-center">
+          <div className="flex flex-wrap flex-col gap-10 border p-4 rounded-lg shadow-lg w-full sm:max-w-[100%] md:max-w-[50%] lg:max-w-[22%] md:h-[50vh]">
             <div>
               <img
                 src={assets.customer_service}
@@ -32,12 +35,8 @@ function Contact() {
               />
             </div>
             <div className="flex flex-col flex-wrap gap-1">
-              <p className="flex flex-wrap font-semibold">
-                Chat to appointment
-              </p>
-              <p className="flex flex-wrap text-gray-500">
-                speak to our friendly team
-              </p>
+              <p className="flex flex-wrap font-semibold">Chat to appointment</p>
+              <p className="flex flex-wrap text-gray-500">speak to our friendly team</p>
               <p>
                 <a href="mailto:lch@gmail.com" className="underline">
                   lch@gmail.com
@@ -45,7 +44,8 @@ function Contact() {
               </p>
             </div>
           </div>
-          <div className="flex flex-wrap flex-col gap-10 border p-4 rounded-lg shadow-lg w-[20%]">
+
+          <div className="flex flex-wrap flex-col gap-10 border p-4 rounded-lg shadow-lg w-full sm:max-w-[100%] md:max-w-[50%] lg:max-w-[22%] md:h-[50vh]">
             <div>
               <img
                 src={assets.customer_support}
@@ -55,9 +55,7 @@ function Contact() {
             </div>
             <div className="flex flex-col flex-wrap gap-1">
               <p className="flex flex-wrap font-semibold">Chat to support</p>
-              <p className="flex flex-wrap text-gray-500">
-                we are here to help
-              </p>
+              <p className="flex flex-wrap text-gray-500">we are here to help</p>
               <p>
                 <a href="mailto:lch@gmail.com" className="underline">
                   supportlch@gmail.com
@@ -65,7 +63,8 @@ function Contact() {
               </p>
             </div>
           </div>
-          <div className="flex flex-wrap flex-col gap-10 border p-4 rounded-lg shadow-lg w-[20%]">
+
+          <div className="flex flex-wrap flex-col gap-10 border p-4 rounded-lg shadow-lg w-full sm:max-w-[100%] md:max-w-[50%] lg:max-w-[22%] md:h-[50vh]">
             <div>
               <img
                 src={assets.placeholder}
@@ -75,9 +74,7 @@ function Contact() {
             </div>
             <div className="flex flex-col flex-wrap gap-1">
               <p className="flex flex-wrap font-semibold">Visit us</p>
-              <p className="flex flex-wrap text-gray-500">
-                visit our office HQ.
-              </p>
+              <p className="flex flex-wrap text-gray-500">visit our office HQ.</p>
               <p>
                 <a href="mailto:lch@gmail.com" className="underline">
                   view on google maps
@@ -85,7 +82,8 @@ function Contact() {
               </p>
             </div>
           </div>
-          <div className="flex flex-wrap flex-col gap-10 border p-4 rounded-lg shadow-lg w-[20%]">
+
+          <div className="flex flex-wrap flex-col gap-10 border p-4 rounded-lg shadow-lg w-full sm:max-w-[100%] md:max-w-[50%] lg:max-w-[22%] md:h-[50vh]">
             <div>
               <img
                 src={assets.technical_support}
@@ -95,9 +93,7 @@ function Contact() {
             </div>
             <div className="flex flex-col flex-wrap gap-1">
               <p className="flex flex-wrap font-semibold">Call us</p>
-              <p className="flex flex-wrap text-gray-500">
-                Mon-Fri from 8am to 5am
-              </p>
+              <p className="flex flex-wrap text-gray-500">Mon-Fri from 8am to 5am</p>
               <p>
                 <a href="mailto:lch@gmail.com" className="underline">
                   +9182736478
@@ -106,8 +102,13 @@ function Contact() {
             </div>
           </div>
         </div>
+
+
+
+
+
         <div className="flex flex-wrap flex-col justify-center items-center gap-8">
-          <p className="text-3xl text-primary">Frequently asked questions</p>
+          <p className="text-3xl text-primary text-center">Frequently asked questions</p>
           <div className="flex flex-wrap w-[100%]  justify-center h-auto gap-4 py-4">
             {items.map((item, index) => (
               <div
