@@ -1,3 +1,11 @@
+items-center
+ 
+ mt-[-80px]
+ 
+items-center
+ 
+w-[20px] h-[20px]
+ 
 md:min-w-[250px] lg:max-w-[300px] w-auto
  
 md:min-w-[250px] md:max-w-[300px] w-auto

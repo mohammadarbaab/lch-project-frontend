@@ -1,5 +1,5 @@
-import React from "react";
 import { assets } from "../assests/assest";
+import React, { useContext, useEffect, useState } from "react";
 
 function Footer() {
   return (
@@ -45,41 +45,7 @@ function Footer() {
     //     </p>
     //   </div>
     // </div>
-    <div className="mb-1 mt-4 flex flex-col gap-6 justify-evenly">
-      {/* Top Div Container */}
-      <div className="flex lg:flex-row flex-col lg:justify-between justify-center lg:items-start items-center bg-gradient-to-r from-[#800080] to-[#9b59b6] sm:p-12 p-8 rounded-3xl shadow-2xl lg:gap-2 gap-5 ">
-        <p className="sm:text-[26px] text-[22px] font-semibold text-white">
-          Sign up and Book appointment <br /> with your Trusted Doctors
-        </p>
-        {/* left div */}
-        <div className="flex flex-row p-1 flex-wrap gap-2 lg:justify-start lg:items-start justify-center items-center">
-          {/* inputs main div */}
-          <div className="flex flex-col gap-2 flex-wrap">
-            {/* inputs section */}
-            <div className="flex flex-row gap-2 flex-wrap">
-              <input
-                placeholder="Full Name"
-                className="py-1 bg-transparent border-b-2 w-48 placeholder:text-white focus:outline-none flex-wrap flex-1 flex-row"
-              />
-              <input
-                placeholder="Your Email*"
-                className="py-1 bg-transparent border-b-2 w-48 placeholder:text-white focus:outline-none flex-wrap flex-1"
-              />
-              <input
-                placeholder="Password"
-                className="py-1 bg-transparent border-b-2 w-48 placeholder:text-white focus:outline-none flex-wrap flex-1"
-              />
-            </div>
-            {/* text for sign up */}
-            <p className="text-white">Sign up reach to your favorite doctors</p>
-          </div>
-          {/* button for sign up */}
-          <button className=" border-[#fef8e9] rounded-lg border mt-4 mb-4 p-2 font-semibold text-[14px] text-black bg-[#fef8e9] hover:scale-105 transition-all">
-            SIGN UP
-          </button>
-        </div>
-      </div>
-
+    <div className="mb-1 mt-24   flex flex-col gap-6 justify-evenly">
       {/* Middle div */}
       <div className="flex flex-wrap md:flex-row flex-col gap-4">
         {/* Expertise Card */}
@@ -153,8 +119,8 @@ function Footer() {
           </ul>
         </div>
 
- {/* Learn & Support Card */}
- <div className="flex flex-col flex-wrap gap-4 bg-gradient-to-r from-[#800080] to-[#9b59b6] p-8 rounded-2xl text-white shadow-2xl flex-1 md:min-w-[250px] lg:max-w-[300px] w-auto">
+        {/* Learn & Support Card */}
+        <div className="flex flex-col flex-wrap gap-4 bg-gradient-to-r from-[#800080] to-[#9b59b6] p-8 rounded-2xl text-white shadow-2xl flex-1 md:min-w-[250px] lg:max-w-[300px] w-auto">
           <h2 className="font-semibold text-[24px]">
             Learn & Support
             <hr className="border-t-4 border-gray-400 mt-2 rounded-2xl" />
@@ -222,35 +188,35 @@ function Footer() {
             </li>
           </ul>
         </div>
-       
+
       </div>
 
       {/* Bottom Div */}
-      <div className="flex flex-row flex-wrap justify-between bg-primary p-4 rounded-2xl text-gray-400">
-        <h2 className="">MeDifyCare</h2>
+      <div className="flex sm:flex-row sm:gap-0 gap-3 flex-col flex-wrap justify-between bg-primary p-4 rounded-2xl text-gray-400 items-center">
+        <h2 className="text-[12px] sm:text-[14px]">MeDifyCare</h2>
 
-        <h2 className="">©2024 MeDifyCare,All rights reserved.</h2>
+        <h2 className="text-[12px] sm:text-[14px]">©2024 MeDifyCare,All rights reserved.</h2>
 
-        <div className="flex flex-row flex-wrap gap-4">
+        <div className="flex flex-row flex-wrap sm:gap-4 gap-2">
           <img
             src={assets.linkdln}
             alt="LinkedIn icon"
-            className="w-[20px] h-[20px]"
+            className="sm:w-[20px] sm:h-[20px] w-[15px] h-[15px]"
           />
           <img
             src={assets.twitter}
             alt="Twitter icon"
-            className="w-[20px] h-[20px]"
+            className="sm:w-[20px] sm:h-[20px] w-[15px] h-[15px]"
           />
           <img
             src={assets.facebook}
             alt="Facebook icon"
-            className="w-[20px] h-[20px]"
+            className="sm:w-[20px] sm:h-[20px] w-[15px] h-[15px]"
           />
           <img
             src={assets.youtube}
             alt="YouTube icon"
-            className="w-[20px] h-[20px]"
+            className="sm:w-[20px] sm:h-[20px] w-[15px] h-[15px]"
           />
         </div>
       </div>
