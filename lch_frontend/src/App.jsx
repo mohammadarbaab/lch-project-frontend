@@ -35,7 +35,7 @@ function App() {
         </Routes>
         
       </div>
-      <div className="md:mx-[5%] mx-[3%]"><Footer></Footer></div>
+      <div className="md:mx-[0%] mx-[3%]"><Footer></Footer></div>
       
       
     </>
