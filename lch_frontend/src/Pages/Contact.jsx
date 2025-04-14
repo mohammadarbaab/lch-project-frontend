@@ -26,7 +26,7 @@ function Contact() {
 
 
         <div className="flex flex-wrap flex-row gap-4 w-full items-center justify-center">
-          <div className="flex flex-wrap flex-col gap-10 border p-4 rounded-lg shadow-lg w-full sm:max-w-[100%] md:max-w-[50%] lg:max-w-[22%] md:h-[50vh]">
+          <div className="flex flex-wrap flex-col gap-5 border p-4 rounded-lg shadow-lg w-full sm:max-w-[100%] md:max-w-[50%] lg:max-w-[22%] md:h-[40vh]">
             <div>
               <img
                 src={assets.customer_service}
@@ -45,7 +45,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className="flex flex-wrap flex-col gap-10 border p-4 rounded-lg shadow-lg w-full sm:max-w-[100%] md:max-w-[50%] lg:max-w-[22%] md:h-[50vh]">
+          <div className="flex flex-wrap flex-col gap-5 border p-4 rounded-lg shadow-lg w-full sm:max-w-[100%] md:max-w-[50%] lg:max-w-[22%] md:h-[40vh]">
             <div>
               <img
                 src={assets.customer_support}
@@ -64,7 +64,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className="flex flex-wrap flex-col gap-10 border p-4 rounded-lg shadow-lg w-full sm:max-w-[100%] md:max-w-[50%] lg:max-w-[22%] md:h-[50vh]">
+          <div className="flex flex-wrap flex-col gap-5 border p-4 rounded-lg shadow-lg w-full sm:max-w-[100%] md:max-w-[50%] lg:max-w-[22%] md:h-[40vh]">
             <div>
               <img
                 src={assets.placeholder}
@@ -83,7 +83,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className="flex flex-wrap flex-col gap-10 border p-4 rounded-lg shadow-lg w-full sm:max-w-[100%] md:max-w-[50%] lg:max-w-[22%] md:h-[50vh]">
+          <div className="flex flex-wrap flex-col gap-5 border p-4 rounded-lg shadow-lg w-full sm:max-w-[100%] md:max-w-[50%] lg:max-w-[22%] md:h-[40vh]">
             <div>
               <img
                 src={assets.technical_support}

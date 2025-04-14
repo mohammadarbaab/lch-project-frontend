@@ -33,8 +33,10 @@ function App() {
           <Route path="/my-appointments" element={<MyAppointments />} />
           <Route path="/appointment/:docId" element={<Appointment />} />
         </Routes>
-        <Footer></Footer>
+        
       </div>
+      <div className="md:mx-[5%] mx-[3%]"><Footer></Footer></div>
+      
       
     </>
   );
