@@ -4,6 +4,7 @@ import { AppContext } from "../context/AppContext";
 import { assets } from "../assests/assest";
 import RelatedDoctors from "../Components/RelatedDoctors";
 import { toast } from "react-toastify";
+import { buildApiUrl } from "../assests/assest";
 import axios from "axios";
 function Appointment() {
   const { docId } = useParams();
@@ -121,37 +122,68 @@ function Appointment() {
     }
   }, [doctors, docId]); // Fetch the doctor info when doctors or docId changes
 
+  // const bookAppointment = async () => {
+  //   if (!token) {
+  //     toast.warn("Login to book appointment");
+  //     return navigate("/login");
+  //   }
+
+  //   try {
+  //     const date = docSlots[slotIndex][0].datetime;
+  //     let day = date.getDate();
+  //     let month = date.getMonth() + 1;
+  //     let year = date.getFullYear();
+
+  //     const slotDate = day + "_" + month + "_" + year;
+
+  //     const { data } = await axios.post(
+  //       backendUrl + "api/user/book-appointment",
+  //       { docId, slotDate, slotTime },
+  //       { headers: { token } }
+  //     );
+  //     if (data.success) {
+  //       toast.success("Appointment booked successfully");
+  //       getDoctorsData();
+  //       navigate("/my-appointments");
+  //     } else {
+  //       toast.error("doctor not available");
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //     toast.error("Failed to book appointment");
+  //   }
+  // };
   const bookAppointment = async () => {
-    if (!token) {
-      toast.warn("Login to book appointment");
-      return navigate("/login");
+  if (!token) {
+    toast.warn("Login to book appointment");
+    return navigate("/login");
+  }
+
+  try {
+    const date = docSlots[slotIndex][0].datetime;
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+
+    const slotDate = day + "_" + month + "_" + year;
+
+    const { data } = await axios.post(
+      buildApiUrl('api/user/book-appointment'),
+      { docId, slotDate, slotTime },
+      { headers: { token } }
+    );
+    if (data.success) {
+      toast.success("Appointment booked successfully");
+      getDoctorsData();
+      navigate("/my-appointments");
+    } else {
+      toast.error("doctor not available");
     }
-
-    try {
-      const date = docSlots[slotIndex][0].datetime;
-      let day = date.getDate();
-      let month = date.getMonth() + 1;
-      let year = date.getFullYear();
-
-      const slotDate = day + "_" + month + "_" + year;
-
-      const { data } = await axios.post(
-        backendUrl + "/api/user/book-appointment",
-        { docId, slotDate, slotTime },
-        { headers: { token } }
-      );
-      if (data.success) {
-        toast.success("Appointment booked successfully");
-        getDoctorsData();
-        navigate("/my-appointments");
-      } else {
-        toast.error("doctor not available");
-      }
-    } catch (error) {
-      console.error(error);
-      toast.error("Failed to book appointment");
-    }
-  };
+  } catch (error) {
+    console.error(error);
+    toast.error("Failed to book appointment");
+  }
+};
   return (
     docInfo && (
       <div>

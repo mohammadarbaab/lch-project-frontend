@@ -3,6 +3,7 @@ import { AppContext } from "../context/AppContext";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { buildApiUrl } from "../assests/assest";
 
 function Login() {
   const [state, setState] = useState("Sign up");
@@ -14,11 +15,44 @@ function Login() {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
 
+  // const onSubmitHandler = async (event) => {
+  //   event.preventDefault();
+  //   try {
+  //     if (state === "Sign up") {
+  //       const { data } = await axios.post(backendUrl + "/api/user/register", {
+  //         name,
+  //         password,
+  //         email,
+  //       });
+  //       if (data.success) {
+  //         localStorage.setItem("token", data.token);
+  //         setToken(data.token);
+  //       } else {
+  //         toast.error(data.message);
+  //         console.log("this is error");
+  //       }
+  //     } else {
+  //       const { data } = await axios.post(backendUrl + "/api/user/login", {
+  //         email,
+  //         password,
+  //       });
+  //       if (data.success) {
+  //         localStorage.setItem("token", data.token);
+  //         setToken(data.token);
+  //       } else {
+  //         toast.error("User is not available in database");
+  //       }
+  //     }
+  //   } catch (error) {
+  //     console.log("error catch side");
+  //     toast.error("error", toast.message);
+  //   }
+  // };
   const onSubmitHandler = async (event) => {
     event.preventDefault();
     try {
       if (state === "Sign up") {
-        const { data } = await axios.post(backendUrl + "/api/user/register", {
+        const { data } = await axios.post(buildApiUrl("api/user/register"), {
           name,
           password,
           email,
@@ -31,7 +65,7 @@ function Login() {
           console.log("this is error");
         }
       } else {
-        const { data } = await axios.post(backendUrl + "/api/user/login", {
+        const { data } = await axios.post(buildApiUrl("api/user/login"), {
           email,
           password,
         });
@@ -47,7 +81,6 @@ function Login() {
       toast.error("error", toast.message);
     }
   };
-
   useEffect(() => {
     if (token) {
       navigate("/");

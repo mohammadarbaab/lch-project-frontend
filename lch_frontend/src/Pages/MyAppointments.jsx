@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { buildApiUrl } from '../assests/assest';
 
 function MyAppointments() {
   const { backendUrl, token, getDoctorsData } = useContext(AppContext);
@@ -29,40 +30,77 @@ function MyAppointments() {
       dateArray[0] + " " + months[Number(dateArray[1])] + " " + dateArray[2]
     );
   };
-  const getUserAppointments = async () => {
-    try {
-      const { data } = await axios.get(backendUrl + "/api/user/appointments", {
-        headers: { token },
-      });
-      if (data.success) {
-        setAppointments(data.appointments.reverse());
-        console.log("if data is success", data.appointments);
-      }
-    } catch (error) {
-      console.error(error);
-      toast.error(error.message);
-    }
-  };
+  // const getUserAppointments = async () => {
+  //   try {
+  //     const { data } = await axios.get(backendUrl + "api/user/appointments", {
+  //       headers: { token },
+  //     });
+  //     if (data.success) {
+  //       setAppointments(data.appointments.reverse());
+  //       console.log("if data is success", data.appointments);
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //     toast.error(error.message);
+  //   }
+  // };
 
-  const cancelAppointment = async (appointmentId) => {
-    try {
-      console.log(appointmentId);
-      const { data } = await axios.post(
-        backendUrl + "/api/user/cancel-appointment",
-        { appointmentId },
-        { headers: { token } }
-      );
-      if (data.success) {
-        toast.success("Appointment cancelled");
-        getUserAppointments();
-      } else {
-        toast.error(data.message);
-      }
-    } catch (error) {
-      console.error(error);
-      toast.error("falied");
+  // const cancelAppointment = async (appointmentId) => {
+  //   try {
+  //     console.log(appointmentId);
+  //     const { data } = await axios.post(
+  //       backendUrl + "api/user/cancel-appointment",
+  //       { appointmentId },
+  //       { headers: { token } }
+  //     );
+  //     if (data.success) {
+  //       toast.success("Appointment cancelled");
+  //       getUserAppointments();
+  //     } else {
+  //       toast.error(data.message);
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //     toast.error("falied");
+  //   }
+  // };
+
+
+  const getUserAppointments = async () => {
+  try {
+    const { data } = await axios.get(
+      buildApiUrl('api/user/appointments'),
+      { headers: { token } }
+    );
+    if (data.success) {
+      setAppointments(data.appointments.reverse());
+      console.log("if data is success", data.appointments);
     }
-  };
+  } catch (error) {
+    console.error(error);
+    toast.error(error.message);
+  }
+};
+
+const cancelAppointment = async (appointmentId) => {
+  try {
+    console.log(appointmentId);
+    const { data } = await axios.post(
+      buildApiUrl('api/user/cancel-appointment'),
+      { appointmentId },
+      { headers: { token } }
+    );
+    if (data.success) {
+      toast.success("Appointment cancelled");
+      getUserAppointments();
+    } else {
+      toast.error(data.message);
+    }
+  } catch (error) {
+    console.error(error);
+    toast.error("falied");
+  }
+};
   useEffect(() => {
     if (token) {
       getUserAppointments();

@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { buildApiUrl } from '../assests/assest';
 
 export const AppContext = createContext();
 
@@ -19,38 +20,70 @@ const AppContextProvider = (props) => {
   const [doctors, setDoctors] = useState([]);
   console.log("doctors", doctors);
 
+  // const getDoctorsData = async () => {
+  //   try {
+  //     const { data } = await axios.get(
+  //       `${process.env.REACT_APP_BACKEND_URL}api/doctor/list`
+  //     );
+  //     if (data.success) {
+  //       setDoctors(data.doctors);
+  //     } else {
+  //       toast.error(data.message);
+  //     }
+  //   } catch (error) {
+  //     console.log("error", error);
+  //     toast.error("error catch", error.message);
+  //   }
+  // };
+
+  // const loadUserProfileData = async () => {
+  //   try {
+  //     const { data } = await axios.get(backendUrl + "api/user/get-profile", {
+  //       headers: { token },
+  //     });
+  //     if (data.success) {
+  //       setUserData(data.userData);
+  //     } else {
+  //       toast.error(data.message);
+  //     }
+  //   } catch (error) {
+  //     console.log("error", error);
+  //     toast.error(error.message);
+  //   }
+  // };
+
   const getDoctorsData = async () => {
-    try {
-      const { data } = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/api/doctor/list`
-      );
-      if (data.success) {
-        setDoctors(data.doctors);
-      } else {
-        toast.error(data.message);
-      }
-    } catch (error) {
-      console.log("error", error);
-      toast.error("error catch", error.message);
+  try {
+    const { data } = await axios.get(
+      buildApiUrl('api/doctor/list')
+    );
+    if (data.success) {
+      setDoctors(data.doctors);
+    } else {
+      toast.error(data.message);
     }
-  };
+  } catch (error) {
+    console.log("error", error);
+    toast.error("error catch", error.message);
+  }
+};
 
-  const loadUserProfileData = async () => {
-    try {
-      const { data } = await axios.get(backendUrl + "/api/user/get-profile", {
-        headers: { token },
-      });
-      if (data.success) {
-        setUserData(data.userData);
-      } else {
-        toast.error(data.message);
-      }
-    } catch (error) {
-      console.log("error", error);
-      toast.error(error.message);
+const loadUserProfileData = async () => {
+  try {
+    const { data } = await axios.get(
+      buildApiUrl('api/user/get-profile'),
+      { headers: { token } }
+    );
+    if (data.success) {
+      setUserData(data.userData);
+    } else {
+      toast.error(data.message);
     }
-  };
-
+  } catch (error) {
+    console.log("error", error);
+    toast.error(error.message);
+  }
+};
   const value = {
     doctors,
     getDoctorsData,
