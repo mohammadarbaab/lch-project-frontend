@@ -15,41 +15,49 @@ function Navbar() {
     localStorage.removeItem("token");
   };
   return (
-    <div className="flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400">
+    <div className="flex items-center justify-between text-sm py-1 mb-5 rounded-full bg-card px-3 sm:px-4 lg:px-6 shadow-sm border mt-4">
       <img
         src={assets.logo}
         alt=""
         onClick={() => navigate("/")}
-        className="md:w-[150px] lg:w-[200px] w-[130px] cursor-pointer"
+        className="md:w-[140px] lg:w-[150px] w-[130px] cursor-pointer"
       />
-      <div className="hidden md:flex flex-wrap bg-gray-50 px-4 lg:px-8 py-2 rounded-full shadow-sm shadow-[#B266B2]">
-        <ul className="hidden md:flex items-start gap-2 lg:gap-4 font-medium">
-          <NavLink to="/">
-            <li className="py-1 hover:scale-125 hover:cursor-pointer transition-transform">
-              Home
-              <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
-            </li>
-          </NavLink>
-          <NavLink to="/doctors">
-            <li className="py-1 hover:scale-125 hover:cursor-pointer transition-transform">
-              Find a Specialist
-            </li>
-            <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
-          </NavLink>
-          <NavLink to="/about">
-            <li className="py-1 hover:scale-125 hover:cursor-pointer transition-transform">
-              Why Choose Us
-            </li>
-            <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
-          </NavLink>
-          <NavLink to="/contact">
-            <li className="py-1 hover:scale-125 hover:cursor-pointer transition-transform">
-              Reach Out to Us
-            </li>
-            <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
-          </NavLink>
+      <div className="hidden lg:flex px-4 lg:px-8 py-2">
+        <ul className="hidden md:flex items-start gap-4 lg:gap-8 font-medium text-[14px]">
+          {[
+            { label: "Home", to: "/" },
+            { label: "Find a Specialist", to: "/doctors" },
+            { label: "Why Choose Us", to: "/about" },
+            { label: "Reach Out to Us", to: "/contact" },
+          ].map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              className={({ isActive }) =>
+                `relative py-1 transition-transform hover:scale-110 ${
+                  isActive ? "text-black font-semibold" : "text-gray-500"
+                }`
+              }
+            >
+              <li className="flex flex-col items-center">
+                {item.label}
+                {/* Underline for active link */}
+                <span
+                  className={`
+              mt-1 h-1 w-8 rounded-full bg-purple-600 transition-all duration-300
+              ${
+                item.to === window.location.pathname
+                  ? "opacity-100"
+                  : "opacity-0"
+              }
+            `}
+                />
+              </li>
+            </NavLink>
+          ))}
         </ul>
       </div>
+
       {/* Dropdown start here */}
       <div className="flex items-center gap-4">
         {token && userData ? (
@@ -123,13 +131,13 @@ function Navbar() {
         <img
           onClick={() => setShowMenu(true)}
           src={assets.menu_bar}
-          className="w-8 md:hidden"
+          className="w-8 lg:hidden"
         />
         {/* Mobile Menu */}
         <div
           className={`${
             showMenu ? "fixed w-full" : "h-0 w-0"
-          } md:hidden right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}
+          } lg:hidden right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}
         >
           <div className="flex items-center justify-between px-5 py-6">
             <img className="w-36" src={assets.logo} alt="" />

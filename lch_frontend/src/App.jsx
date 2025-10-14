@@ -13,6 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import Home from "./Test/Home";
 import Home from "./Pages/Home";
+import FaqSection from "./Components/Faq";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/my-profile" element={<MyProfile />} />
           <Route path="/my-appointments" element={<MyAppointments />} />
           <Route path="/appointment/:docId" element={<Appointment />} />
+          <Route path="/faq" element={<FaqSection />} />
         </Routes>
         
       </div>

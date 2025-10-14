@@ -3,6 +3,9 @@ import Header from "../Components/Header";
 import SpecialityMenu from "../Components/SpecialityMenu";
 import TopDoctors from "../Components/TopDoctors";
 import Banner from "../Components/Banner";
+import FaqSection from "../Components/Faq.jsx";
+import PatientTestimonials from "../Components/PatientTestimonials.jsx";
+import GetInTouchFooter from "../Components/GetInTouchFooter.jsx";
 
 function Home() {
   return (
@@ -11,6 +14,9 @@ function Home() {
       <SpecialityMenu></SpecialityMenu>
       <TopDoctors></TopDoctors>
       <Banner></Banner>
+      <FaqSection></FaqSection>
+      <PatientTestimonials></PatientTestimonials>
+      {/* <GetInTouchFooter></GetInTouchFooter> */}
     </div>
   );
 }
